@@ -1,0 +1,194 @@
+/* sass properties */
+/* colors */
+/* fonts */
+/* css reset */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+/* main css */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.7rem; }
+
+.head {
+  width: 80%;
+  margin: 15rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  justify-items: center;
+  grid-row-gap: 7.5rem; }
+  .head-top {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    text-align: center; }
+    .head-top__heading {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-size: 4.5rem; }
+    .head-top__text {
+      max-width: 50%;
+      margin: 0 auto;
+      padding-top: 1.5rem;
+      padding-bottom: 3rem; }
+  .head-img {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    max-width: 100%; }
+  .head-com {
+    grid-column: 1/2;
+    grid-row: 3/4; }
+    .head-com__heading {
+      font-size: 7rem;
+      font-weight: 700; }
+    .head-com__text {
+      font-size: 1.5rem;
+      font-weight: 400; }
+  .head-msg {
+    grid-column: 2/3;
+    grid-row: 3/4; }
+    .head-msg__heading {
+      font-size: 7rem;
+      font-weight: 700; }
+    .head-msg__text {
+      font-size: 1.5rem;
+      font-weight: 400; }
+
+.btn {
+  padding: 2.5rem 9rem;
+  border: none;
+  background-color: #ff52bf;
+  border-radius: 50px;
+  color: #f5faff;
+  font-weight: 700;
+  cursor: pointer; }
+  .btn:hover {
+    background-color: #ff8fd8; }
+  .btn--small {
+    padding: 1.5rem 5rem;
+    border-radius: 5px; }
+
+.img {
+  width: 100%;
+  display: block; }
+
+.sec {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 5rem;
+  padding: 0 7rem; }
+  .sec-1 {
+    background-color: #f5faff; }
+  .sec-3 {
+    background-color: #f5faff; }
+  .sec-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    padding: 15rem 10rem; }
+  .sec-con__heading {
+    margin-bottom: 1.3rem;
+    font-size: 3rem; }
+  .sec-img {
+    max-width: 100%; }
+
+.foot {
+  color: #f5faff;
+  padding: 10rem;
+  background-color: #00252e;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7rem; }
+  .foot-lft {
+    display: grid;
+    grid-template-rows: repeat(4, min-content);
+    gap: 2.5rem; }
+  .foot-rgt {
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    gap: 2.5rem; }
+  .foot-logo {
+    filter: brightness(0) invert(1); }
+  .foot-list__item {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem; }
+    .foot-list__item:not(:last-child) {
+      margin: 2.5rem 0; }
+  .foot-soc {
+    margin-top: 3.5rem; }
+    .foot-soc__img {
+      padding: 0.5rem;
+      width: 3.5rem;
+      height: 3.5rem;
+      background-color: #f5faff;
+      fill: #00252e;
+      border: 1px solid #f5faff;
+      border-radius: 5px;
+      cursor: pointer; }
+      .foot-soc__img:not(:last-child) {
+        margin-right: 3.5rem; }
+      .foot-soc__img:hover {
+        background-color: skyblue;
+        border: 1px solid skyblue; }
+  .foot-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem; }
+    .foot-form__input {
+      min-width: 45%;
+      padding: 1rem 1.5rem;
+      border-radius: 5px;
+      border: none; }
+  .foot-image {
+    width: 100%;
+    display: block; }
+
+/* Media queries */
+@media screen and (max-width: 53.125em) {
+  .head-top__text {
+    max-width: 100%; }
+  .sec {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr max-content;
+    row-gap: 7rem; }
+    .sec-con {
+      text-align: center; }
+    .sec-img {
+      grid-row: 1/2; } }
+
+@media screen and (max-width: 40.625em) {
+  html {
+    font-size: 55%; }
+  .head {
+    width: 90%;
+    grid-template-rows: repeat(4, min-content); }
+    .head-com {
+      grid-column: 1/3;
+      grid-row: 3/4; }
+    .head-msg {
+      grid-column: 1/3;
+      grid-row: 4/5; }
+    .head-top__heading {
+      font-size: 3rem; }
+  .sec {
+    padding: 7rem 3rem; }
+    .sec-4 {
+      grid-row-gap: 3.5rem;
+      padding: 7rem 3rem; }
+  .foot {
+    padding: 7rem 3rem;
+    grid-template-columns: 1fr; }
+    .foot-lft {
+      grid-row: 2/3; }
+  .btn--small {
+    margin-left: 5rem; } }
